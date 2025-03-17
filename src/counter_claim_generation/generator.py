@@ -31,7 +31,11 @@ class EnhancedCounterClaimGenerator:
         self.use_negation = use_negation
         
         # Initialize spaCy for text processing
-        self.nlp = spacy.load("en_core_web_lg")
+        try:
+            self.nlp = spacy.load("en_core_web_lg")
+        except OSError:
+            # Fall back to the smaller model if the large one isn't available
+            self.nlp = spacy.load("en_core_web_sm")
         
     def generate_counter_claims(self, claim: str, 
                                num_candidates: int = 5,

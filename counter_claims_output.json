@@ -1,0 +1,14 @@
+[
+  {
+    "original_claim": "Masks are effective in preventing the spread of COVID-19.",
+    "generated_counter_claims": [
+      {
+        "counter_claim": "face shields are effective in preventing the spread of COVID-19.",
+        "strategy": "entity_substitution",
+        "original_entity": "masks",
+        "replacement_entity": "face shields",
+        "contradiction_score": 0.943462073802948
+      }
+    ]
+  }
+]
